@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#00B781</color>
+    <color name="colorPrimaryDark">#178F6C</color>
+    <color name="colorAccent">#00B781</color>
+    <color name="background">#00B781</color>-->
+
+    <!-- FirstColor End-->
+    <!--<color name="colorPrimary">#20B88B</color>
+    <color name="colorPrimaryDark">#309B7C</color>
+    <color name="colorAccent">#20B88B</color>
+    <color name="background">#20B88B</color>
+    <color name="sliderBackground">#34be96</color>
+    <color name="switchColor">#81c784</color>-->
+    <!-- FirstColor End -->
+
+    <!-- SecondColor Start -->
+    <color name="colorPrimaryDark">#595C93</color>
+    <color name="colorPrimary">#A99AD5</color>
+    <color name="colorAccent">#A99AD5</color>
+    <color name="background">#A99AD5</color>
+    <color name="sliderBackground">#A99AD5</color>
+    <color name="switchColor">#A99AD5</color>
+
+    <color name="colorIcon">#A99AD5</color>
+    <color name="filter_icon">#595C93</color>
+    <color name="slider_icon">#fff</color>
+    <color name="navigation_drawer_icon">#595C93</color>
+    <color name="about_us_icon">#A99AD5</color>
+    <color name="slider_dots_inactive">#7e839b</color>
+    <color name="slider_dots_active">#e6e7f9</color>
+    <color name="profile_background">#38333a</color>
+    <color name="master_planner_background">#dad0e1</color>
+
+    <!--SecondColor End-->
+
+
+    <color name="dialogueBackground">#707070</color>
+    <color name="overdue">#d4ae0a15</color>
+    <color name="textColorBlack">#383838</color>
+    <color name="textColorBlack2">#424343</color>
+    <color name="widget_background">#99000000</color>
+    <color name="widget_title_underline">#60000000</color>
+    <color name="widget_item_underline">#a3a3a3</color>
+    <color name="widget_transparent_background">#25000000</color>
+    <color name="text_hint">#95989A</color>
+    <color name="priority_none">#c8c6c6</color>
+    <color name="priority_low">#21e655</color>
+    <color name="priority_medium">#d98734</color>
+    <color name="priority_high">#eb2557</color>
+    <color name="text_title">#1e2803</color>
+    <color name="gray">#e2e6e9</color>
+    <color name="icon_color">#81c784</color>
+    <color name="blue_200">#FF90CAF9</color>
+    <color name="blue_500">#FF2196F3</color>
+    <color name="blue_700">#FF1976D2</color>
+    <color name="textColorWhite">#ffffff</color>
+    <color name="dialog_title_bar">#F7F5F5</color>
+    <color name="text_color_white_lite">#F7FAF9</color>
+    <!--action bar filter icon color-->
+    <!--<color name="filter_icon">#90A4AE</color>-->
+
+</resources>

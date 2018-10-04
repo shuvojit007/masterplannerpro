@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_marginLeft="3dp"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:background="@drawable/dialog_title_bar"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/plus"
+            android:layout_height="28dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Add New Card"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/textureView"
+                >
+                <EditText
+                    android:id="@+id/etTask"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="add a description"
+
+                    android:focusableInTouchMode="true"
+                    />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_above="@+id/bottomBtns"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/bottomBtns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                >
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/button_save"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_color_white_lite"
+                    android:text="Save" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
+

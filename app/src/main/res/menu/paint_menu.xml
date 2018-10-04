@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_draw_attrs"
+        android:icon="@drawable/paint_palette"
+        android:title="Draw attributes" />
+    <item
+        android:id="@+id/action_draw_delete"
+        android:icon="@drawable/paint_delete"
+        android:title="Clear Layout" />
+    <item
+        android:id="@+id/action_draw_tool"
+        android:icon="@drawable/paint_brush"
+        android:title="Draw Tool" />
+    <item
+        android:id="@+id/action_draw_mode"
+        android:icon="@drawable/paint_edit"
+        android:title="Draw Mode" />
+    <item
+        android:id="@+id/action_draw_save"
+        android:icon="@drawable/paint_save"
+        android:title="Save" />
+
+
+
+</menu>

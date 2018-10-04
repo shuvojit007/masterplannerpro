@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_undo"
+        android:enabled="false"
+        android:icon="@drawable/paint_undo"
+        android:title="Undo"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_redo"
+        android:enabled="false"
+        android:icon="@drawable/paint_redo"
+        android:title="Redo"
+        app:showAsAction="ifRoom" />
+</menu>

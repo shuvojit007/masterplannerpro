@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowEnterAnimation">@anim/slid_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_right</item>
+    </style>
+
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+    <!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Toolbar back arrow icon white -->
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#FFF</item>
+    </style>
+
+
+    <!-- Toast Style -->
+    <style name="mytoast">
+        <item name="textBold">false</item>
+        <item name="textColor">@color/white</item>
+        <!--<item name="font">@font/retrofont</item>-->
+        <item name="textSize">14sp</item>
+        <item name="colorBackground">@color/colorPrimaryDark</item>
+        <item name="solidBackground">true</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <!--<item name="iconStart">@drawable/ic</item>-->
+        <!--<item name="iconEnd">@drawable/ic</item>-->
+        <item name="length">LONG</item> LONG or SHORT
+        <!--<item name="gravity">bottom</item> top or center-->
+        <item name="radius">5dp</item>
+    </style>
+
+
+
+</resources>

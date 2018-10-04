@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.LockTodoListActivity">
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tl_lock_todo"
+            android:layout_width="match_parent"
+            app:theme="@style/ToolbarColoredBackArrow"
+            android:background="@drawable/action_bar_gradient"
+            android:layout_height="?android:attr/actionBarSize">
+
+
+</android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvMsgEmptyLockTodo"
+        android:layout_below="@+id/tl_lock_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/you_don_t_have_any_locked_to_do"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lock_todo_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>

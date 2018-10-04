@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cruxbd.master_planner_pro.view.activities.ViewTodoActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/view_todo_toolbar"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:elevation="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/action_bar_gradient">
+    </android.support.v7.widget.Toolbar>
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginBottom="30dp"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todo"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/check_all"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvTodo_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#424343"
+                        tools:text="Buy Java Book"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvCountdownTitle_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:text="Countdown"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCountdown_v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivCountdown"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/history"
+
+                        />
+
+                    <!-- @+id/tvTodo_vt  vt=ViewTodoActivity -->
+
+                    <TextView
+                        android:id="@+id/tvCountdown_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivCountdown"
+                        android:text="Countdown not set."
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivCountdown" />
+
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvNoteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/note_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvNotes_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#424343"
+                        tools:text="Head First Java, 2nd Edition
+By Kathy Sierra"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/tvDueDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvDueDAte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/calendar_blank"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDueDate_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorBlack2"
+                        android:text="Due date not set."
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/alarm"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvReminder_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#424343"
+                        tools:text="Remind me tomorrow at 10:00 am
+Friday, April 13th 2018"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/sync"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvRepeat_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorBlack2"
+                        android:text="Repeat Once"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="List"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/format_list_bulleted_color_primary"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvTag_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+
+                        android:textColor="#424343"
+                        tools:text="Personal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/priority_high"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvPriority_vt"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#424343"
+                        android:text="None"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp" />
+
+                    <ImageView
+                        android:id="@+id/ivPriority"
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:background="@drawable/circle"
+                        android:layout_marginTop="1dp"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLockTitle_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Lock"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvLock_v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivLock"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/lock_open_outline"
+
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp" />
+
+                    <!-- @+id/tvTodo_vt  vt=ViewTodoActivity -->
+
+                    <TextView
+                        android:id="@+id/tvLock_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivLock"
+                        android:text="Lock your todo"
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/ivLock"
+                        android:layout_marginStart="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLocationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_title"
+                android:textColor="@color/textColorBlack"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    >
+                    <ImageView
+                        android:id="@+id/ivMarkerIcon"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/map_marker_radius"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvLocationName_vt"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#424343"
+                        android:layout_centerVertical="true"
+                        tools:text="Zindabazar, Sylhet"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivMarkerIcon"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivMarkerIcon" />
+
+                    <ImageView
+                        android:id="@+id/ivNavigation"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/directions"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            >
+
+            <TextView
+                android:id="@+id/tvCreadteDate_vt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                tools:text="Created on Friday, 6th April, 2018"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp" />
+
+            <ImageView
+                android:id="@+id/ivDeleteTodo"
+                android:scaleType="fitCenter"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/delete"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

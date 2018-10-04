@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <RelativeLayout
+        android:id="@+id/view_background_LBR"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="91dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/priority_high">
+
+        <ImageView
+            android:id="@+id/delete_icon_LBR"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            app:srcCompat="@drawable/delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_toLeftOf="@id/delete_icon_LBR"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvLocationReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivTodo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/auto_fix" />
+
+
+            <TextView
+                android:id="@+id/tvTodoLcation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="18dp"
+                android:text="This is a todo........" />
+
+            <ImageView
+                android:id="@+id/ivEarthLocation"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/earth_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/ivEarthLocation"
+                android:text="Location Based Reminder"
+                android:textColor="@color/switchColor"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/ivMarkerLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/ivTodo"
+                app:srcCompat="@drawable/map_marker_radius" />
+
+            <TextView
+                android:id="@+id/tvLocationPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvTodoLcation"
+                android:layout_alignStart="@+id/tvTodoLcation"
+                android:layout_below="@+id/ivTodo"
+                android:layout_marginTop="5dp"
+                android:text="Zindabazar, Sylhet." />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

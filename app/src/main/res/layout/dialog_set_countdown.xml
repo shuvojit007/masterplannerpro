@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_marginLeft="3dp"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+       <ImageView
+           android:layout_width="28dp"
+           android:layout_marginRight="10dp"
+           app:srcCompat="@drawable/run_fast"
+           android:layout_height="28dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Set Count Down"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimen_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/etCountdownTitle_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:hint="Countdown title"
+                android:inputType="textAutoCorrect|text"
+                android:padding="10dp"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tvCountdownDate_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCountdownTitle_d"
+                android:layout_marginTop="10dp"
+
+                android:hint="Tap to set countdown date..."
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:padding="10dp"
+
+                />
+
+            <Button
+                android:id="@+id/ivBtnSaveCountdown"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Enable Countdown"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+
+                android:background="@drawable/button_save"
+                android:layout_below="@+id/tvCountdownDate_d"
+                />
+            <!--android:drawableStart="@drawable/history_slide"
+            android:drawableLeft="@drawable/history_slide"-->
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

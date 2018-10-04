@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/add_todo_tl"
+        android:layout_width="match_parent"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/action_bar_gradient"
+         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Todo"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/check_all"
+
+                        />
+                    <!-- @+id/tvTodo_vt  vt=ViewTodoActivity -->
+
+
+                    <EditText
+                        android:id="@+id/add_todo_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textAutoCorrect|text"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="Enter task here"
+                        android:nextFocusForward="@+id/add_todo_Notes_et"
+                        android:textColor="#424343"
+                        android:textSize="14sp">
+
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/mic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        app:srcCompat="@drawable/microphone_outline" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Note"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/note_text" />
+
+                    <TextView
+                        android:id="@+id/add_todo_Notes_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add note..."
+                        android:maxLines="5"
+                        android:padding="10dp"
+                        android:textColor="#ca424343"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Due Date"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivCalendar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/calendar_blank" />
+
+                    <TextView
+                        android:id="@+id/add_todo_DueDate_et"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivCalendar"
+                        android:hint="Add due date"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:textColor="@color/textColorBlack2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivDueDateClear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        app:srcCompat="@drawable/close"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivClock"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/alarm" />
+
+                    <TextView
+                        android:id="@+id/add_todo_Reminder"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivClock"
+                        android:hint="Remind me at..."
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:textColor="#424343"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivReminderClear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        app:srcCompat="@drawable/close"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_todo_Repeat_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivRepeat"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/ic_sync_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_card_item_repeat"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivRepeat"
+                        android:hint="Repeat this reminder..."
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:textColor="@color/textColorBlack2"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/ivRepeat" />
+
+                    <ImageView
+                        android:id="@+id/ivRepeatClear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        app:srcCompat="@drawable/close"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dimen_10" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/list"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivList"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/format_list_bulleted_color_primary" />
+
+                    <Spinner
+                        android:id="@+id/spinnerList_et"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivList"
+                        android:text="Personal"
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/addtag"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_toRightOf="@+id/spTag_et"
+                        app:srcCompat="@drawable/playlist_plus"
+                        tools:ignore="UnknownId" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/priority"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llPriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingTop="@dimen/cardview_padding"
+                        android:layout_alignParentStart="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/priority_high"
+
+                            android:layout_marginStart="10dp" />
+
+
+                        <TextView
+                            android:id="@+id/tvPriority_at"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center_vertical"
+                            android:text="None"
+                            android:textColor="#424343"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvPriorityColor"
+                            android:layout_width="11dp"
+                            android:layout_height="11dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/circle" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbPriority_at"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/llPriority"
+                        android:layout_marginLeft="30dp"
+                        android:max="3"
+                        android:progress="0"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp" />
+
+                    <TextView
+                        android:id="@+id/tvNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sbPriority_at"
+                        android:paddingLeft="35dp"
+                        android:text="None"
+                        android:textSize="10sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_toRightOf="@+id/tvNone"
+                        android:text="Low"
+                        android:textSize="10sp"
+                        android:layout_marginStart="60dp"
+                        android:layout_toEndOf="@+id/tvNone" />
+
+                    <TextView
+                        android:id="@+id/tvMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sbPriority_at"
+                        android:layout_toRightOf="@+id/tvLow"
+                        android:paddingLeft="50dp"
+                        android:text="Medium"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toRightOf="@+id/tvMedium"
+                        android:text="@string/high"
+                        android:textSize="12sp"
+
+                        android:layout_marginStart="50dp"
+                        android:layout_toEndOf="@+id/tvMedium" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/lock"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivLock"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/lock_outline"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp" />
+
+                    <!-- @+id/tvTodo_vt  vt=ViewTodoActivity -->
+
+                    <TextView
+                        android:id="@+id/tvLock_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivLock"
+                        android:text="@string/lock_your_todo"
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivLock" />
+
+                    <Switch
+                        android:id="@+id/switchLock_at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/countdown"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivCountdown"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/history"
+
+
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp" />
+
+                    <!-- @+id/tvTodo_vt  vt=ViewTodoActivity -->
+
+                    <TextView
+                        android:id="@+id/tvCountdown_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivCountdown"
+                        android:text="@string/set_countdown_for_this_to_do"
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/ivCountdown"
+                        android:layout_marginStart="10dp" />
+
+                    <Switch
+                        android:id="@+id/switchCountdown_at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/tvCountdown_addTodo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="00y 00m 00d 00h 00m 00w"
+                        android:layout_below="@+id/tvCountdown_et"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/ivCountdown"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorBlack2"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivCountdown"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/location"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                android:paddingStart="10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivMarkerIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/map_marker_plus"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/tvLocationName_et"
+                        android:layout_width="265dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/ivMarkerIcon"
+                        android:paddingBottom="@dimen/dimen_10"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:text="@string/add_location"
+                        android:textColor="#424343"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/ivMarkerIcon"
+                        android:layout_marginStart="10dp" />
+
+                    <ImageView
+                        android:id="@+id/ivLocationClear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        app:srcCompat="@drawable/close"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dimen_10" />
+
+                    <!-- <ImageView
+                         android:id="@+id/ivNavigation_at"
+                         android:layout_width="24dp"
+                         android:layout_height="24dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginBottom="5dp"
+                         android:layout_centerVertical="true"
+                         android:layout_below="@id/ivLocationClear"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="10dp"
+                         android:src="@drawable/directions_green" />-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/fab_addnote"
+        android:icon="@drawable/fab_menu_note"
+        android:title="@string/add_todo" />
+
+    <item
+        android:id="@+id/fab_location"
+        android:icon="@drawable/fab_menu_location"
+        android:title="@string/location_reminder" />
+    <item
+        android:id="@+id/fab_master_planner"
+        android:icon="@drawable/fab_master_planner"
+        android:title="@string/planner" />
+    <item
+        android:id="@+id/fab_countdown"
+        android:icon="@drawable/history_white"
+        android:title="@string/countdown" />
+
+
+    <item
+        android:id="@+id/fab_draw"
+        android:icon="@drawable/fab_menu_draw"
+        android:title="@string/draw" />
+
+</menu>

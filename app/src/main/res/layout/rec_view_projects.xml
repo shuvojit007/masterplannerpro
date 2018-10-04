@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <!-- MPP = MasterPlannerProject -->
+    <RelativeLayout
+        android:id="@+id/view_background_MPP"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="62dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/priority_high">
+
+        <ImageView
+            android:id="@+id/delete_icon_MPP"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            app:srcCompat="@drawable/delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_toLeftOf="@id/delete_icon_MPP"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvCreateProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="5dp"
+        android:layout_marginBottom="1dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Name"
+                android:layout_alignParentTop="true"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:paddingTop="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_10"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                />
+
+            <TextView
+                android:id="@+id/tvCardCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Cards"
+                android:layout_below="@+id/tvProjectName"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+package com.cruxbd.master_planner_pro.di.master_planner_scrollview_fragment_feature.component;
+
+import com.cruxbd.master_planner_pro.di.AppComponent;
+import com.cruxbd.master_planner_pro.di.master_planner_scrollview_fragment_feature.module.MasterPlannerScrollViewFragmentModule;
+import com.cruxbd.master_planner_pro.di.master_planner_scrollview_fragment_feature.scope.MasterPlannerScrollViewFragmentScope;
+import com.cruxbd.master_planner_pro.view.fragments.MasterPlannerScrollViewFragment;
+
+import dagger.Component;
+
+@Component(modules = MasterPlannerScrollViewFragmentModule.class, dependencies = AppComponent.class)
+@MasterPlannerScrollViewFragmentScope
+public interface MasterPlannerScrollViewFragmentComponent {
+    void injectMasterPlannerScrollViewFragment(MasterPlannerScrollViewFragment masterPlannerScrollViewFragment);
+}

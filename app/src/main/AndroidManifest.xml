@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cruxbd.master_planner_pro">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <!-- Required to set reminders -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_API_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".view.activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".view.activities.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.ViewTodoActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.AddTodoDetails"
+            android:configChanges="orientation"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.NoteEdittext02"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.PaintView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:configChanges="orientation"
+                android:screenOrientation="portrait"
+                android:value="com.cruxbd.master_planner_pro.view.activities.PaintList" />
+        </activity>
+        <activity
+            android:name=".view.activities.location_based_reminder.LocationBasedReminderDetails"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:configChanges="orientation"
+                android:screenOrientation="portrait"
+                android:value="com.cruxbd.master_planner_pro.view.activities.location_based_reminder.LocationReminder" />
+        </activity>
+        <activity
+            android:name=".view.activities.MasterPlannerActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MasterPlannerProjectsActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.MasterPlannerProjectsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.AddItemToCard"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.location_based_reminder.LocationReminder"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.authentication.Register"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.activities.authentication.Login" />
+        <activity android:name=".BackupRestore.BackupActivity" />
+        <activity
+            android:name=".view.activities.AlarmCancelActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.CountdownSetActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".view.activities.ViewCountdownActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activities.CountdownViewAllActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+
+        <!-- Location Reminder:: Services -->
+        <service android:name=".utils.geofence_service.GeofenceTrasitionService" />
+
+        <!-- Alarm:: Broadcast Receiver -->
+        <receiver
+            android:name=".utils.alarm_service.AlarmReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Alarm:: BootReceiver -->
+        <receiver
+            android:name=".utils.alarm_service.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Alarm:: AlarmTonePlaying Service -->
+        <service android:name=".utils.alarm_service.RingtonePlayingService" />
+
+        <activity
+            android:name=".view.activities.About_Us"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activities.PinLock"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="98e5b5292d76ca6e0dea17348784aad9b53017e8" />
+
+        <activity
+            android:name=".view.activities.PaintList"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".view.activities.LockTodoListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cruxbd.master_planner_pro.view.activities.MainActivity" />
+        </activity>
+
+        <!-- widgets -->
+        <receiver android:name=".view.widgets.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service
+            android:name=".view.widgets.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+    </application>
+
+</manifest>

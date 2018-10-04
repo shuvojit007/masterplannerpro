@@ -1,0 +1,14 @@
+package com.cruxbd.master_planner_pro.di.location_based_reminder_details_activity.component;
+
+import com.cruxbd.master_planner_pro.di.AppComponent;
+import com.cruxbd.master_planner_pro.di.location_based_reminder_details_activity.mdoule.LocationBasedReminderDetailsModule;
+import com.cruxbd.master_planner_pro.di.location_based_reminder_details_activity.scope.LocationBasedReminderDetailsScope;
+import com.cruxbd.master_planner_pro.view.activities.location_based_reminder.LocationBasedReminderDetails;
+
+import dagger.Component;
+
+@Component(modules = LocationBasedReminderDetailsModule.class, dependencies = AppComponent.class)
+@LocationBasedReminderDetailsScope
+public interface LocationBasedReminderDetailsComponent {
+    void injectLocainBasedReminderDetailsActivity(LocationBasedReminderDetails locationBasedReminderDetails);
+}

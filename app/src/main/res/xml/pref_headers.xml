@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Account">
+        <!--android:icon="@drawable/ic_account_circle"-->
+        <!--<Preference
+
+            android:summary="Sign in to get more from Master Planner app"
+            android:title="Profile">
+
+            <intent
+                android:action="com.chikeandroid.settingsscreendemo.SETTING_START_ACTIVITY"
+                android:targetClass="com.cruxbd.todo_scrum.view.activities.MainActivity"
+                android:targetPackage="com.cruxbd.todo_scrum" />
+
+        </Preference>-->
+
+
+        <Preference
+            android:key="@string/key_update_password"
+            android:summary="Change User Password"
+            android:title="Update Passowrd">
+
+
+        </Preference>
+        <!--android:icon="@drawable/ic_upgrade"-->
+        <!--<Preference
+
+            android:summary="No ads and there is no limit on features."
+            android:title="Upgrade to PRO">
+
+            <intent
+                android:action="com.chikeandroid.settingsscreendemo.SETTING_START_ACTIVITY"
+                android:targetClass="com.cruxbd.todo_scrum.view.activities.MainActivity"
+                android:targetPackage="com.cruxbd.todo_scrum" />
+
+        </Preference>-->
+
+
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:title="Lock">
+        <Preference
+            android:id="@+id/todo_pin_check"
+            android:defaultValue="false"
+            android:key="key_todo_lock"
+            android:summary="Set a pin code and lock your todo"
+            android:title="Todo Lock" >
+
+
+        </Preference>
+
+        <Preference
+            android:key="key_todo_reset"
+            android:summary="Forgot your pin, here you can reset your pin"
+            android:title="Reset Pin">
+
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Reminder">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_todo_reminder"
+            android:summary="Todo reminder"
+            android:title="Todo" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_planner_reminder"
+            android:summary="Planner reminder"
+            android:title="Planner" />
+    </PreferenceCategory>
+
+
+    <!--<PreferenceCategory android:title="Notification">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="todo_notification_key"
+            android:summary="Todo notification"
+            android:title="Todo" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="todo_notification_key"
+            android:summary="Location reminder notification"
+            android:title="Location Reminder" />
+
+    </PreferenceCategory>-->
+
+    <PreferenceCategory android:title="Help &amp; Support">
+
+        <Preference android:title="@string/title_send_feedback"
+
+            android:key="@string/key_submit_feedback"
+            />
+
+        <Preference android:title="Rate Master Planner"
+            android:key="key_rate_app"
+            android:summary="Rate us on play store.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_rate_app" />
+        </Preference>
+
+        <Preference android:title="@string/share_this_app"
+            android:key="@string/key_recommend_app"
+            />
+
+        <!--<Preference android:title="Help"
+            android:key="help_key"
+            android:summary="Have a query, contact us. We always happy to help.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_faq" />
+        </Preference>-->
+
+        <Preference android:title="About"
+            android:key="about_key"
+            android:summary="1.0"/>
+
+    </PreferenceCategory>
+
+
+    <Preference android:title="Sign out"
+        android:key="@string/key_sign_out"
+        />
+
+
+</PreferenceScreen>
+

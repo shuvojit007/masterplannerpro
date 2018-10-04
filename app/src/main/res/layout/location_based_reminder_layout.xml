@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_reminder_details"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/action_bar_gradient"
+        android:elevation="15dp"
+        app:theme="@style/ToolbarColoredBackArrow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Location"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--GoogleMap fragment-->
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/map02"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/ivMarkerIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/map_marker_radius" />
+
+                        <TextView
+                            android:id="@+id/tvLocationName_lbr"
+                            android:layout_width="220dp"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/ivMarkerIcon"
+                            android:text="Please pick your location"
+                            android:textColor="#424343"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ivNavigation_lbr"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/directions" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Radius"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/llPriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/cardview_padding"
+                        android:paddingTop="@dimen/cardview_padding">
+
+                        <ImageView
+                            android:id="@+id/ivCompas"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/math_compass"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tvRadius_lbr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivCompas"
+                            android:text="100m"
+                            android:textColor="#424343"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ivRadiusPopupMenu"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/dots_vertical" />
+
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbRadius_lbr"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/llPriority"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/sbRadius_lbr">
+
+                        <TextView
+                            android:id="@+id/tvNone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingLeft="35dp"
+                            android:text="1km"
+                            android:textSize="10sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvLow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="55dp"
+                            android:layout_toRightOf="@+id/tvNone"
+                            android:text="5km"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tvMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sbRadius_lbr"
+                            android:layout_toEndOf="@+id/tvLow"
+                            android:layout_toRightOf="@+id/tvLow"
+                            android:paddingLeft="58dp"
+                            android:paddingStart="58dp"
+                            android:text="10km"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="30km"
+                            android:textSize="10sp"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Notify me"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivNotify"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        app:srcCompat="@drawable/alarm" />
+
+                    <!-- @+id/tvTodo_lbr  lbr=LocationBasedReminder -->
+
+                    <TextView
+                        android:id="@+id/tvNotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivNotify"
+                        android:layout_toRightOf="@+id/ivNotify"
+                        android:gravity="center_vertical"
+                        android:text="@string/when_i_am"
+                        android:textColor="#424343"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvNotify"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="5dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_both"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/notify_both" />
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_entering"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/notify_entering_only" />
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_exiting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/notify_exiting_only" />
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Note"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/note_text" />
+
+                    <EditText
+                        android:id="@+id/add_todo_Notes_lbr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="Add note"
+                        android:imeOptions="actionDone"
+                        android:textColor="#424343"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Actions"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/cardview_padding"
+                    android:paddingTop="@dimen/cardview_padding"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/ivAction"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/auto_fix" />
+
+                        <Spinner
+                            android:id="@+id/spinnerActionList_lbr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/ivAction"
+                            android:autofillHints="Add an action"
+                            android:gravity="center_vertical"
+                            android:textColor="#424343"
+                            android:textSize="14sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/pickcontact"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignTop="@+id/ivAction"
+                            android:text="Pick Contact"
+                            android:layout_alignParentRight="true" />
+
+                        <EditText
+                            android:id="@+id/etPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spinnerActionList_lbr"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:hint="Write phone number here..."
+                            android:inputType="phone"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/etMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/etPhoneNumber"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:hint="Write your message here..."
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="Validity"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivValidity"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/calendar_blank" />
+
+                    <TextView
+                        android:id="@+id/tvValidity"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ivValidity"
+                        android:gravity="center_vertical"
+                        android:hint="This reminder valid till this date, until it fire
+(tap here to select a date)"
+                        android:textColor="@color/textColorBlack2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivDueDateClear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/close" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

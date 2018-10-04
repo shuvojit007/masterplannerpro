@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.MasterPlannerActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:background="@drawable/action_bar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.github.florent37.hollyviewpager.HollyViewPager
+        android:background="@color/cardview_light_background"
+        android:id="@+id/hollyViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:hvp_headerHeight="150dp" />
+
+
+
+
+
+
+</LinearLayout>

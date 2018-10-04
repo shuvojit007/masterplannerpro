@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_location_reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.location_based_reminder.LocationReminder">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_location"
+            android:layout_width="match_parent"
+            app:theme="@style/ToolbarColoredBackArrow"
+            android:background="@drawable/action_bar_gradient"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:background="@drawable/switch_compact"
+                android:layout_gravity="right"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginRight="16dp"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/location_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tvMsgEmptyLocationReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="top"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/add_a_location_to_remind_you"
+        />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/location_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        app:srcCompat="@drawable/map_marker_plus_white"
+        android:layout_marginBottom="15dp"
+        app:layout_anchor="@+id/location_rec"
+        app:layout_anchorGravity="right|bottom" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_above="@+id/textViewAppName"
+        app:srcCompat="@drawable/ic_launcher"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="104dp"
+        tools:text="Mridul Das"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="104dp" />
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignStart="@+id/tvUserName"
+        android:layout_below="@+id/tvUserName"
+        tools:text="mridul@cruxbd.com"
+        android:layout_alignLeft="@+id/tvUserName" />
+
+    <TextView
+        android:id="@+id/textViewAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/app_name"
+        />
+
+
+
+</RelativeLayout>

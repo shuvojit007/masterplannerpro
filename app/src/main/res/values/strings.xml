@@ -1,0 +1,274 @@
+<resources>
+    <string name="app_name">Master Planner Pro</string>
+    <string name="app_version">1.4</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Google Map API KEY -->
+    <string name="google_maps_API_key">AIzaSyBW2F_x7HCqdz516Br2wapWUcYDk0JsuIo</string>
+
+    <!-- Facebook -->
+    <!--<string name="FACEBOOK_APP_ID">1799013947070423</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">aaf8c3af5e799858277d181b93bdfa3c</string>
+
+    // if your Facebook App ID is 1234567, you should use ak1234567
+    <string name="ak_login_protocol_scheme">ak1799013947070423</string>-->
+
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_header_account">Account</string>
+    <string name="pref_header_reminders">Reminders</string>
+    <string name="pref_rate_us">Rate us</string>
+    <string name="pref_header_about">About</string>
+    <string name="pref_header_logout">Logout</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="notifications">Notifications</string>
+    <string name="done">Done</string>
+    <string name="help_and_feedback">Help and Feedback</string>
+    <string name="more_of_our_apps">More of our Apps</string>
+    <string name="settings">Settings</string>
+    <string name="upgrade_account">Upgrade Account</string>
+    <string name="removes_ads">Removes Ads</string>
+    <string name="master_planner">Master Planner</string>
+    <string name="apps">APPS</string>
+    <string name="help">HELP</string>
+    <string name="planner">Planner</string>
+    <string name="ads">ADS</string>
+
+
+    <string name="menu_undo">Undo</string>
+
+    <string name="menu_redo">Redo</string>
+
+    <string name="menu_github">GitHub</string>
+
+    <!-- Dialog -->
+
+
+    <string name="dialog_title">Insert link</string>
+
+    <string name="dialog_edit_hint">http(s)://</string>
+
+    <string name="dialog_button_ok">OK</string>
+
+    <string name="dialog_button_cancel">Cancel</string>
+
+    <!-- Toast -->
+
+
+    <string name="toast_bold">Bold</string>
+
+    <string name="toast_italic">Italic</string>
+
+    <string name="toast_underline">Underline</string>
+
+    <string name="toast_strikethrough">Strikethrough</string>
+
+    <string name="toast_bullet">Bullet</string>
+
+    <string name="toast_quote">Quote</string>
+
+    <string name="toast_insert_link">Insert link</string>
+
+    <string name="toast_format_clear">Format clear</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="stroke_width">Stroke width: %1$d</string>
+    <string name="opacity">Opacity: %1$d</string>
+    <string name="font_size">Font size: %1$d</string>
+
+    <string name="activity_backup_drive_desc">Backup your data to Google Drive in case you lose or change your Device.</string>
+
+
+    <!-- Master Planner -->
+
+    <string name="cards">%1$ Cards</string>
+    <string name="bill_for">Bill for..</string>
+    <string name="amount">Amount</string>
+    <string name="accounting_billing">Accounting/Billing</string>
+    <string name="reminder">Reminder</string>
+    <string name="remind_me_at">Remind me at…</string>
+    <string name="description">Description</string>
+    <string name="write_something">write something…</string>
+    <string name="add_location">Add location</string>
+    <string name="save">Save</string>
+    <string name="give_a_suitable_title_to_your_list">Give a suitable title to your list.</string>
+    <string name="login">Login</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="when_i_am">When I am</string>
+    <string name="notify_both">both entering and exiting from the place</string>
+    <string name="notify_entering_only">entering into the place</string>
+    <string name="notify_exiting_only">exiting from the place</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="next_7_days">Next 7 Days</string>
+    <string name="finished">Finished</string>
+    <string name="all_list">All List</string>
+    <string name="list">List</string>
+    <string name="priority">Priority</string>
+    <string name="high">High</string>
+    <string name="lock">Lock</string>
+    <string name="location">Location</string>
+    <string name="set_countdown_for_this_to_do">Set countdown for this to-do.</string>
+    <string name="countdown">Countdown</string>
+    <string name="lock_your_todo">Lock your to-do</string>
+
+    <!-- Settings -->
+    <string name="title_send_feedback">Feedback/Help</string>
+    <string name="summary_send_feedback">Give us a feedback.</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="url_faq">https://www.curxbd.com/Privacy/</string>
+    <string name="url_privacy">https://www.curxbd.com/Privacy/</string>
+    <string name="url_rate_app">https://play.google.com/store/apps/details?id=com.cruxbd.master_planner_pro</string>
+    <string name="help_title">Help</string>
+
+    <!-- Settings Key -->
+    <string name="key_submit_feedback">key_submit_feedback</string>
+    <string name="key_sign_out">key_sign_out</string>
+    <string name="key_recommend_app">key_recommend_app</string>
+    <string name="key_rate_app">key_rate_app</string>
+
+    <!--MainActivity fab button -->
+    <string name="profile">Profile</string>
+    <string name="add_todo">Todo Reminder</string>
+    <string name="location_reminder">Location Reminder</string>
+    <string name="draw">Drawing</string>
+
+    <!-- LoginActivity -->
+    <string name="create_account">Create Account</string>
+    <string name="display_name">Display Name</string>
+    <string name="login_with_email">Login with email</string>
+    <string name="register_with_email">Register with email</string>
+    <string name="i_already_have_an_account">I already have an account.</string>
+    <string name="i_don_t_have_an_account">I don\'t have an account.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="your_email">Your Email</string>
+    <string name="tv_message_privacy"><![CDATA[While using this app, you agree to our Terms of Use & Privacy policy.]]></string>
+    <string name="tv_message_dont_share_data">We don\'t share your data without your permission.</string>
+    <string name="key_update_password">key_update_password</string>
+
+    <string name="crux_email">app.cruxbd@gmail.com</string>
+    <string name="crux_description">CRUX is a technology Startup lead by some passionate &amp; professional Researchers, Entrepreneurs &amp; Developers. We are the only company in Bangladesh who works in Embedded System, Robotics and Software altogether. It’s a product based company.</string>
+    <string name="crux_web">https://www.cruxbd.com/</string>
+    <string name="crux_facebook_page">Official.CRUX</string>
+    <string name="crux_email_subject_contact_us_pro">Master Planner pro - contact us</string>
+    <string name="crux_email_subject_contact_us_free">Master Planner free - contact us</string>
+    <string name="share_this_app">Share this app</string>
+    <string name="crux_email_subject_help_feedback">Master Planner Pro - Feedback/Help</string>
+    <string name="app_package_name">com.cruxbd.master_planner_pro</string>
+    <string name="email_subject_install_master_planner_app">Install Master Planner app</string>
+    <string name="email_body_share_text">I\'m using the Master Planner Pro app, I think you will love it!!\n
+To-do, Usual &amp; Location Based Reminder, Project Planner, Countdown, Cloud Backup in one app\n</string>
+    <string name="feedback_help">Feedback/Help</string>
+    <string name="rate_master_planner">Rate Master Planner</string>
+    <string name="you_don_t_have_any_locked_to_do">You don\'t have any Locked To-do.</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="filter_by_tags">Filter By Tags</string>
+    <string name="finish">finish!</string>
+    <string name="edit_project_name">Edit Project Name</string>
+    <string name="edit_project_name_hint">Give a suitable name to your project</string>
+    <string name="key_todo_reminder">key_todo_reminder</string>
+    <string name="key_planner_reminder">key_planner_reminder</string>
+    <string name="repeat_once">Repeat once</string>
+    <string name="repeat_daily">Repeat daily</string>
+    <string name="repeat_weekly">Repeat weekly</string>
+    <string name="google_map_navigation_query">google.navigation:q=%s</string>
+    <string name="google_map_package">com.google.android.apps.maps</string>
+    <string name="created_at">Created at %s</string>
+    <string name="due_date_not_set">Due date not set.</string>
+    <string name="remind_me_at_time">Remind me at %s</string>
+    <string name="priority_none">None</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="view_all">View All</string>
+    <string name="turn_off_countdown">Turn off countdown</string>
+    <string name="turn_on_countdown">Turn on countdown</string>
+    <string name="go_back">Go back</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="tv_msg_set_pin">You have not set your pin yet. Go to settings and set your to-do lock pin.</string>
+    <string name="countdown_list_is_empty">Countdown list is empty</string>
+    <string name="add_a_location_to_remind_you">Add a location to remind you.</string>
+</resources>

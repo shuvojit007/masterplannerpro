@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/slide_container_background"
+    android:orientation="vertical"
+    tools:context="com.cruxbd.master_planner_pro.view.activities.LoginActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="@dimen/dimen_10"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                />
+
+            <!-- Dots -->
+            <LinearLayout
+                android:id="@+id/dotLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-35dp"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+
+            <!--bottom part -->
+
+            <!-- Login Register -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/rl_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+
+                <Button
+
+                    android:id="@+id/btnLogin"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_login"
+                    android:text="Login with email"
+                    android:textColor="@color/white" />
+
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_below="@+id/btnLogin"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/btn_login"
+                    android:text="Register with email"
+                    android:textColor="@color/white"
+                     />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/tvMsgPermission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="We don't share your data without your permission."
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:gravity="center_horizontal|bottom"
+                    android:id="@+id/tvMsgPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="While using this app, you agree to our Terms of Use &amp; Privacy policy."
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!--  Login start -->
+            <RelativeLayout
+                android:id="@+id/rl_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_go_back_from_login"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="showIntro"
+                    app:srcCompat="@drawable/chevron_left"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:id="@+id/tvNoAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="5dp"
+                    android:text="I don't have an account."
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tvNoAccount"
+                    android:text="Sign Up"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_login_email"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNoAccount"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/your_email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_login_password"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ti_login_email"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_password"
+                        android:inputType="textPassword"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                    android:layout_below="@+id/ti_login_password"
+                    android:id="@+id/login_btn"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/login"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="6dp"
+                    app:spinning_bar_width="4dp"/>
+
+                <TextView
+                    android:id="@+id/login_forget_pass"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Forget your password?"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignBottom="@+id/login_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="If you already have an account for Master Planner Free version please SignUp again in Pro Version"
+
+                    />
+
+            </RelativeLayout>
+            <!-- Login end -->
+
+            <!-- Register start -->
+            <RelativeLayout
+                android:id="@+id/rl_register"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                android:onClick="showIntro"
+                android:id="@+id/iv_go_back_from_register"
+                android:layout_marginLeft="15dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/chevron_left"
+                android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tvHaveAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_go_back_from_register"
+                    android:layout_marginLeft="5dp"
+                    android:text="I already have an account."
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvHaveAccount"
+                    android:text="Login"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/reg_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="49dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Display Name"
+                        android:inputType="text|textCapWords"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCreateAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:onClick="RegAccount"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/reg_user_name"
+                    android:background="@color/colorPrimaryDark"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Create Account"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+
+            <!-- Register end -->
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

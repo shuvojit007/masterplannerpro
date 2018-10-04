@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="32dp"
+        >
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/account_circle"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <TextView
+            android:id="@+id/tvDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Mridul Das"
+            android:textStyle="bold"
+
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/ivProfilePic"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tvMemberSince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Member since 2018"
+            android:textColor="@color/gray"
+            android:layout_below="@+id/tvDisplayName"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        >
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+
+            android:background="@drawable/profile_btn_background"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            />
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/profile_btn_background"
+            android:layout_marginRight="@dimen/dimen_10"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

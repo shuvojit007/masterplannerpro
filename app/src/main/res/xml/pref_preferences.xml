@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Lock">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="key_todo_lock"
+            android:summary="Set a pin code and lock your todo"
+            android:title="Todo Lock" />
+
+        <Preference
+            android:summary="Forgot your pin, here you can reset your pin"
+            android:title="Reset Pin">
+
+            <intent
+                android:action="com.chikeandroid.settingsscreendemo.SETTING_START_ACTIVITY"
+                android:targetClass="com.cruxbd.todo_scrum.view.activities.MainActivity"
+                android:targetPackage="com.cruxbd.todo_scrum.view.activities" />
+
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Reminder">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="todo_reminder_key"
+            android:summary="Todo reminder"
+            android:title="Todo"
+            />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="planner_reminder_key"
+            android:summary="Planner reminder"
+            android:title="Planner"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="Notification">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="todo_notification_key"
+            android:summary="Todo notification"
+            android:title="Todo" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="todo_notification_key"
+            android:summary="Location reminder notification"
+            android:title="Location Reminder" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

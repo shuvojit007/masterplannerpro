@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "505715134181",
+    "firebase_url": "https://masterplannerpro.firebaseio.com",
+    "project_id": "masterplannerpro",
+    "storage_bucket": "masterplannerpro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505715134181:android:cb087a1d4b8e5ded",
+        "android_client_info": {
+          "package_name": "com.cruxbd.master_planner_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505715134181-14rj56tnt7aa0r3p3bl1akhavs02do2f.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "505715134181-14rj56tnt7aa0r3p3bl1akhavs02do2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbii9g_y26_KYh67xl5nzI4hnHwwm5eyQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

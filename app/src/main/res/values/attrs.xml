@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2015 Matthew Lee
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License. You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software distributed under the License
+  ~ is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+  ~ or implied. See the License for the specific language governing permissions and limitations under
+  ~ the License.
+  -->
+
+<resources>
+
+    <declare-styleable name="CustomText">
+        <attr name="bulletColor" format="reference|color" />
+        <attr name="bulletRadius" format="reference|dimension" />
+        <attr name="bulletGapWidth" format="reference|dimension" />
+        <attr name="historyEnable" format="reference|boolean" />
+        <attr name="historySize" format="reference|integer" />
+        <attr name="linkColor" format="reference|color" />
+        <attr name="linkUnderline" format="reference|boolean" />
+        <attr name="quoteColor" format="reference|color" />
+        <attr name="quoteStripeWidth" format="reference|dimension" />
+        <attr name="quoteCapWidth" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawView">
+        <attr name="dv_draw_color" format="color"/>
+        <attr name="dv_draw_tool" format="enum">
+            <enum name="pen" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="rectangle" value="2"/>
+            <enum name="circle" value="3"/>
+        </attr>
+        <attr name="dv_draw_mode" format="enum">
+            <enum name="draw" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="eraser" value="2"/>
+        </attr>
+        <attr name="dv_draw_width" format="integer"/>
+        <attr name="dv_draw_alpha" format="integer"/>
+        <attr name="dv_draw_anti_alias" format="boolean"/>
+        <attr name="dv_draw_dither" format="boolean"/>
+        <attr name="dv_draw_style" format="enum">
+            <enum name="fill" value="0"/>
+            <enum name="fill_stroke" value="1"/>
+            <enum name="stroke" value="2"/>
+        </attr>
+        <attr name="dv_draw_corners" format="enum">
+            <enum name="butt" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="square" value="2"/>
+        </attr>
+        <attr name="dv_draw_font_family" format="enum">
+            <enum name="default_font" value="0"/>
+            <enum name="monospace" value="1"/>
+            <enum name="sans_serif" value="2"/>
+            <enum name="serif" value="3"/>
+        </attr>
+        <attr name="dv_draw_font_size" format="integer"/>
+        <attr name="dv_draw_enable_zoom" format="boolean"/>
+        <attr name="dv_draw_max_zoom_factor" format="float"/>
+        <attr name="dv_draw_zoomregion_scale" format="float"/>
+        <attr name="dv_draw_zoomregion_minscale" format="float"/>
+        <attr name="dv_draw_zoomregion_maxscale" format="float"/>
+        <attr name="dv_draw_orientation" format="enum">
+            <enum name="portrait" value="0"/>
+            <enum name="landscape" value="1"/>
+        </attr>
+        <attr name="dv_draw_is_camera" format="boolean"/>
+    </declare-styleable>
+
+</resources>

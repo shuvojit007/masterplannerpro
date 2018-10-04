@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.ViewCountdownActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:elevation="15dp"
+        android:id="@+id/tl_view_countdown"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/action_bar_gradient"/>
+
+    <LinearLayout
+        android:id="@+id/llCountdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23h 12m 35s"
+            android:textColor="@color/textColorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvCountdownStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="remaining"
+            android:layout_marginLeft="5dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvC_titel"
+        android:layout_below="@+id/llCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/textColorBlack"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_c_title"
+        android:layout_below="@+id/tvC_titel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            >
+            <ImageView
+
+                android:id="@+id/iv_c_title"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/note_text"
+                android:layout_centerVertical="true"
+
+                />
+
+            <EditText
+
+                android:id="@+id/etCountdownTitle_v"
+                android:layout_toRightOf="@+id/iv_c_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physics exam"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_c_exp"
+        android:layout_below="@+id/cv_c_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expire on "
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/textColorBlack"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_c_exp"
+        android:layout_below="@+id/tv_c_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            >
+            <ImageView
+
+                android:id="@+id/iv_c_exp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/history"
+                android:layout_centerVertical="true"
+
+                />
+
+            <TextView
+
+                android:id="@+id/tvCountdownDate_v"
+                android:layout_toRightOf="@+id/iv_c_exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11:52 pm Saturday, 12 May, 2018"
+                android:textColor="@color/textColorBlack"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/cv_c_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCountdownFrom"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="This countdown is from your To-do list"
+            />
+
+        <Button
+            android:id="@+id/btnCountdownSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCountdownFrom"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="View To-do"
+            android:background="@drawable/button_corner"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:id="@+id/tvCountdownCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Created on Friday, 6th April, 2018"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:id="@+id/ivDeleteCountdown"
+            android:scaleType="fitCenter"
+            android:layout_width="28dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/delete"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

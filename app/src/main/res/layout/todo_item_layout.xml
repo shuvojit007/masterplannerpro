@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayoutTodo"
+    >
+
+    <RelativeLayout
+
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            app:cardElevation="5dp"
+            android:padding="0dp">
+
+            <RelativeLayout
+                android:id="@+id/view_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+
+                android:background="@drawable/todo_item_red_background"
+                android:paddingBottom="8dp"
+                android:paddingLeft="2dp"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                tools:ignore="RtlSymmetry">
+
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="@dimen/ic_delete"
+                    android:layout_height="@dimen/ic_delete"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padd_10"
+                    android:src="@drawable/ic_delete_white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/padd_10" />
+
+                <TextView
+                    android:id="@+id/tv_delete_todo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padd_10"
+                    android:layout_toLeftOf="@id/delete_icon"
+                    android:text="@string/delete"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/padd_10"
+                    android:layout_toStartOf="@id/delete_icon" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/tvTodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="110dp"
+                android:layout_alignTop="@+id/checkBox"
+                android:layout_toEndOf="@+id/checkBox"
+                android:layout_toRightOf="@+id/checkBox"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                tools:text="Send Email"
+                android:layout_marginEnd="110dp" />
+
+            <ImageView
+                android:id="@+id/iv_alarmClock"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignTop="@id/tvTodo"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/tvAlarmTime"
+                android:layout_toStartOf="@+id/tvAlarmTime"
+                app:srcCompat="@drawable/alarm" />
+
+            <TextView
+                android:id="@+id/tvAlarmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tvTodo"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="2dp"
+                android:textSize="10sp"
+                tools:text="12:55 PM, 12 Jan" />
+
+
+            <TextView
+                android:id="@+id/tvTodoTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/tvTodo"
+                android:layout_alignLeft="@id/tvTodo"
+                android:textSize="12sp"
+                tools:text="Thu, Mar 8, 2018"
+                android:layout_alignStart="@id/tvTodo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTodo"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/ivRepeatAlarm"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/repeat" />
+
+                <ImageView
+                    android:id="@+id/ivNote"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/note_text" />
+
+                <ImageView
+                    android:id="@+id/ivTodoCountdown"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/countdown" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/tvTodoTime"
+                android:layout_alignLeft="@+id/tvTodoTime"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/location_arrow" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTodoTime"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ivLocation"
+                android:layout_toRightOf="@+id/ivLocation"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/textColorBlack"
+                tools:text="Zindabazar, Sylhet."
+                />
+
+            <TextView
+                android:id="@+id/tvListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/tvTodoTime"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/viewPriority"
+                android:layout_toStartOf="@id/viewPriority"
+                android:textColor="@color/textColorBlack"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="Personal" />
+
+            <ImageView
+                android:id="@+id/viewPriority"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tvTodoTime"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

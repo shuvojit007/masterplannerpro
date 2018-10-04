@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tag_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+
+        <EditText
+            android:id="@+id/tag_ed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:hint="Enter your tag name"
+            android:inputType="textAutoCorrect|text"
+            android:textColor="#424343"
+            android:textSize="14sp">
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/tag_fab"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/check_all" />
+
+    </LinearLayout>
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/tag_fab"-->
+        <!--android:layout_width="35dp"-->
+        <!--android:src="@drawable/pencil1"-->
+        <!--android:background="@drawable/pencil1"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin" />-->
+</LinearLayout>

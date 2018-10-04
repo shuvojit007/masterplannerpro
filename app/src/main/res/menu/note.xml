@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_undo"
+        android:icon="@drawable/ic_action_undo"
+        android:id="@+id/undo"
+        app:showAsAction="always"> </item>
+
+    <item android:title="@string/menu_redo"
+        android:icon="@drawable/ic_action_redo"
+        android:id="@+id/redo"
+        app:showAsAction="always"> </item>
+
+    <item android:title="POST"
+        android:icon="@drawable/post"
+        android:id="@+id/github"
+        app:showAsAction="always"> </item>
+
+</menu>

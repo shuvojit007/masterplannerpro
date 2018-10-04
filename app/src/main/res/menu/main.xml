@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_magnify"
+        android:title="@string/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/filter"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menuFilterToday"
+                android:icon="@drawable/filter_calendar_today"
+                android:title="@string/today" />
+            <item
+                android:id="@+id/menuFilterTomorrow"
+                android:icon="@drawable/filter_calendar"
+                android:title="@string/tomorrow" />
+            <item
+                android:id="@+id/menuFilterWeek"
+                android:icon="@drawable/filter_calendar_range"
+                android:title="@string/next_7_days" />
+            <item
+                android:id="@+id/menuFilterFinished"
+                android:icon="@drawable/filter_check_all"
+                android:title="@string/finished" />
+            <item
+                android:id="@+id/menuFilterAll"
+                android:icon="@drawable/filter_select_all"
+                android:title="@string/all_list"
+
+                />
+
+            <item
+                android:id="@+id/menuFilterTag"
+                android:icon="@drawable/format_list_bulleted"
+                android:title="@string/filter_by_tags"
+                />
+
+
+
+            <item
+                android:icon="@drawable/filter_variant"
+                android:id="@+id/filterMore"
+                android:title="More filters">
+                <!-- "file" submenu -->
+                <menu>
+                    <item
+                        android:id="@+id/menuFilterCountdown"
+                        android:icon="@drawable/filter_countdown"
+                        android:title="Todo with Countdown" />
+                    <item
+                        android:id="@+id/menuFilterReminder"
+                        android:icon="@drawable/alarm_check"
+                        android:title="Todo with Reminder"
+
+                        />
+                </menu>
+            </item>
+
+
+
+
+        </menu>
+    </item>
+
+
+
+
+   <!-- <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/account_circle"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />-->
+
+
+
+
+</menu>

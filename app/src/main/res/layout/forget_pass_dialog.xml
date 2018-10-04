@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:padding="5dp"
+    app:cardElevation="10dp"
+    android:background="#00fdfdfd"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTodoLockDialogTitle"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Enter your valid email Adress"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/forgetpassed"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textSize="20sp"
+                android:id="@+id/editText3"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email address" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/forgetpassbtn"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Send"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

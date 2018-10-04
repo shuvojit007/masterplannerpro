@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/llRepeatDaily"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/filter_calendar_range"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:id="@+id/llRepeatWeekDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/filter_calendar_range"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekdays"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llRepeatWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/filter_calendar_today"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:id="@+id/llRepeatMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/filter_calendar"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mothly"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:id="@+id/llRepeatYearly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/border_none_variant"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yearly"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>-->
+
+   <!-- <LinearLayout
+        android:id="@+id/llRepeatCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/calendar_clock"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom"
+            android:layout_marginLeft="20dp"
+
+
+            />
+
+    </LinearLayout>-->
+
+
+</LinearLayout>
