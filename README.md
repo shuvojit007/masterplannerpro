@@ -1,5 +1,4 @@
-# masterplannerpro
-MasterPlanner 
+Master Planner 
 
 The description of Master Planner
 To-do, reminder app reinvented.
